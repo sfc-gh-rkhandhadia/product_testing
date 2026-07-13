@@ -1,0 +1,365 @@
+2026-06-28 19:08:11,321 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2026-06-28 19:08:11,333 INFO o.a.j.JMeter: Loading user properties from: /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/user.properties
+2026-06-28 19:08:11,333 INFO o.a.j.JMeter: Loading system properties from: /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/system.properties
+2026-06-28 19:08:11,336 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2026-06-28 19:08:11,336 INFO o.a.j.JMeter: Version 5.6.3
+2026-06-28 19:08:11,336 INFO o.a.j.JMeter: java.version=21.0.9
+2026-06-28 19:08:11,336 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2026-06-28 19:08:11,336 INFO o.a.j.JMeter: os.name=Mac OS X
+2026-06-28 19:08:11,336 INFO o.a.j.JMeter: os.arch=aarch64
+2026-06-28 19:08:11,336 INFO o.a.j.JMeter: os.version=26.5
+2026-06-28 19:08:11,336 INFO o.a.j.JMeter: file.encoding=UTF-8
+2026-06-28 19:08:11,336 INFO o.a.j.JMeter: java.awt.headless=true
+2026-06-28 19:08:11,336 INFO o.a.j.JMeter: Max memory     =1073741824
+2026-06-28 19:08:11,336 INFO o.a.j.JMeter: Available Processors =10
+2026-06-28 19:08:11,341 INFO o.a.j.JMeter: Default Locale=English (EN)
+2026-06-28 19:08:11,341 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2026-06-28 19:08:11,341 INFO o.a.j.JMeter: JMeterHome=/opt/homebrew/Cellar/jmeter/5.6.3/libexec
+2026-06-28 19:08:11,341 INFO o.a.j.JMeter: user.dir  =/Users/rkhandhadia/.snowflake/cortex/playground/workspace
+2026-06-28 19:08:11,341 INFO o.a.j.JMeter: PWD       =/Users/rkhandhadia/.snowflake/cortex/playground/workspace
+2026-06-28 19:08:11,432 INFO o.a.j.JMeter: IP: 192.168.0.117 Name: L6WG6YTX66 FullName: 192.168.0.117
+2026-06-28 19:08:11,440 INFO o.a.j.s.FileServer: Default base='/Users/rkhandhadia/.snowflake/cortex/playground/workspace'
+2026-06-28 19:08:11,441 INFO o.a.j.s.FileServer: Set new base='/Users/rkhandhadia/Documents/RKDBmirrongtest/jmeter'
+2026-06-28 19:08:11,509 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2026-06-28 19:08:11,527 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2026-06-28 19:08:11,528 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2026-06-28 19:08:11,529 INFO o.a.j.s.SaveService: Loading file: /Users/rkhandhadia/Documents/RKDBmirrongtest/jmeter/data_mirroring_perf_test.jmx
+2026-06-28 19:08:11,560 INFO o.a.j.JMeter: Creating summariser <summary>
+2026-06-28 19:08:11,566 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2026-06-28 19:08:11,566 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-06-28 19:08:11,566 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-06-28 19:08:11,568 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2026-06-28 19:08:11,568 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2026-06-28 19:08:11,591 INFO o.a.j.r.ClassFinder: Will scan jar /opt/homebrew/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2026-06-28 19:08:11,624 INFO o.a.j.r.ClassFinder: Will scan jar /opt/homebrew/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-graphs-basic-2.0.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2026-06-28 19:08:11,627 INFO o.a.j.r.ClassFinder: Will scan jar /opt/homebrew/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-tst-2.5.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2026-06-28 19:08:11,772 INFO o.a.j.JMeter: Running test (1782688091772)
+2026-06-28 19:08:11,781 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 01 - Warm-Up
+2026-06-28 19:08:11,781 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group 01 - Warm-Up.
+2026-06-28 19:08:11,781 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-06-28 19:08:11,781 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=0 delayedStart=false
+2026-06-28 19:08:11,782 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2026-06-28 19:08:11,782 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : 02 - INSERT Benchmark (50 threads x 120s)
+2026-06-28 19:08:11,782 INFO o.a.j.e.StandardJMeterEngine: Starting 50 threads for group 02 - INSERT Benchmark (50 threads x 120s).
+2026-06-28 19:08:11,782 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-06-28 19:08:11,782 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=50 ramp-up=10 delayedStart=false
+2026-06-28 19:08:11,784 INFO o.a.j.t.JMeterThread: Thread started: 01 - Warm-Up 1-1
+2026-06-28 19:08:11,789 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-1
+2026-06-28 19:08:11,793 INFO o.a.j.t.ThreadGroup: Started thread group number 2
+2026-06-28 19:08:11,793 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 3 : 03 - UPDATE Benchmark (50 threads x 120s)
+2026-06-28 19:08:11,793 INFO o.a.j.e.StandardJMeterEngine: Starting 50 threads for group 03 - UPDATE Benchmark (50 threads x 120s).
+2026-06-28 19:08:11,793 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-06-28 19:08:11,793 INFO o.a.j.t.ThreadGroup: Starting thread group... number=3 threads=50 ramp-up=10 delayedStart=false
+2026-06-28 19:08:11,796 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2026-06-28 19:08:11,796 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2026-06-28 19:08:11,796 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2026-06-28 19:08:11,796 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2026-06-28 19:08:11,800 INFO o.a.j.t.ThreadGroup: Started thread group number 3
+2026-06-28 19:08:11,800 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2026-06-28 19:08:11,998 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-2
+2026-06-28 19:08:12,198 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-3
+2026-06-28 19:08:12,391 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-4
+2026-06-28 19:08:12,595 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-5
+2026-06-28 19:08:12,798 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-6
+2026-06-28 19:08:12,994 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-7
+2026-06-28 19:08:13,198 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-8
+2026-06-28 19:08:13,388 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-9
+2026-06-28 19:08:13,599 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-10
+2026-06-28 19:08:13,790 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-11
+2026-06-28 19:08:13,997 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-12
+2026-06-28 19:08:14,196 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-13
+2026-06-28 19:08:14,398 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-14
+2026-06-28 19:08:14,596 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-15
+2026-06-28 19:08:14,797 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-16
+2026-06-28 19:08:14,994 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-17
+2026-06-28 19:08:15,188 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-18
+2026-06-28 19:08:15,391 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-19
+2026-06-28 19:08:15,597 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-20
+2026-06-28 19:08:15,792 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-21
+2026-06-28 19:08:15,995 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-22
+2026-06-28 19:08:16,198 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-23
+2026-06-28 19:08:16,387 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-24
+2026-06-28 19:08:16,596 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-25
+2026-06-28 19:08:16,798 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-26
+2026-06-28 19:08:16,804 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-1
+2026-06-28 19:08:16,997 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-27
+2026-06-28 19:08:17,007 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-2
+2026-06-28 19:08:17,192 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-28
+2026-06-28 19:08:17,214 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-3
+2026-06-28 19:08:17,393 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-29
+2026-06-28 19:08:17,414 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-4
+2026-06-28 19:08:17,594 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-30
+2026-06-28 19:08:17,613 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-5
+2026-06-28 19:08:17,792 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-31
+2026-06-28 19:08:17,809 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-6
+2026-06-28 19:08:17,988 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-32
+2026-06-28 19:08:18,006 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-7
+2026-06-28 19:08:18,187 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-33
+2026-06-28 19:08:18,212 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-8
+2026-06-28 19:08:18,392 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-34
+2026-06-28 19:08:18,412 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-9
+2026-06-28 19:08:18,590 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-35
+2026-06-28 19:08:18,604 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-10
+2026-06-28 19:08:18,793 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-36
+2026-06-28 19:08:18,803 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-11
+2026-06-28 19:08:18,992 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-37
+2026-06-28 19:08:19,013 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-12
+2026-06-28 19:08:19,192 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-38
+2026-06-28 19:08:19,207 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-13
+2026-06-28 19:08:19,387 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-39
+2026-06-28 19:08:19,406 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-14
+2026-06-28 19:08:19,593 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-40
+2026-06-28 19:08:19,606 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-15
+2026-06-28 19:08:19,792 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-41
+2026-06-28 19:08:19,807 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-16
+2026-06-28 19:08:19,994 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-42
+2026-06-28 19:08:19,998 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-17
+2026-06-28 19:08:20,193 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-43
+2026-06-28 19:08:20,213 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-18
+2026-06-28 19:08:20,392 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-44
+2026-06-28 19:08:20,412 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-19
+2026-06-28 19:08:20,593 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-45
+2026-06-28 19:08:20,607 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-20
+2026-06-28 19:08:20,782 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-46
+2026-06-28 19:08:20,811 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-21
+2026-06-28 19:08:20,993 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-47
+2026-06-28 19:08:21,003 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-22
+2026-06-28 19:08:21,193 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-48
+2026-06-28 19:08:21,205 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-23
+2026-06-28 19:08:21,392 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-49
+2026-06-28 19:08:21,396 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-24
+2026-06-28 19:08:21,592 INFO o.a.j.t.JMeterThread: Thread started: 02 - INSERT Benchmark (50 threads x 120s) 2-50
+2026-06-28 19:08:21,611 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-25
+2026-06-28 19:08:21,797 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-26
+2026-06-28 19:08:22,013 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-27
+2026-06-28 19:08:22,211 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-28
+2026-06-28 19:08:22,405 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-29
+2026-06-28 19:08:22,614 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-30
+2026-06-28 19:08:22,810 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-31
+2026-06-28 19:08:23,002 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-32
+2026-06-28 19:08:23,203 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-33
+2026-06-28 19:08:23,407 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-34
+2026-06-28 19:08:23,610 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-35
+2026-06-28 19:08:23,809 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-36
+2026-06-28 19:08:24,009 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-37
+2026-06-28 19:08:24,203 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-38
+2026-06-28 19:08:24,409 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-39
+2026-06-28 19:08:24,608 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-40
+2026-06-28 19:08:24,810 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-41
+2026-06-28 19:08:25,007 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-42
+2026-06-28 19:08:25,206 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-43
+2026-06-28 19:08:25,402 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-44
+2026-06-28 19:08:25,605 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-45
+2026-06-28 19:08:25,807 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-46
+2026-06-28 19:08:26,004 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-47
+2026-06-28 19:08:26,202 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-48
+2026-06-28 19:08:26,405 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-49
+2026-06-28 19:08:26,607 INFO o.a.j.t.JMeterThread: Thread started: 03 - UPDATE Benchmark (50 threads x 120s) 3-50
+2026-06-28 19:09:26,173 INFO o.a.j.t.JMeterThread: Thread is done: 01 - Warm-Up 1-1
+2026-06-28 19:09:26,181 INFO o.a.j.t.JMeterThread: Thread finished: 01 - Warm-Up 1-1
+2026-06-28 19:09:30,038 INFO o.a.j.r.Summariser: summary +   2775 in 00:01:18 =   35.5/s Avg:  2569 Min:    91 Max: 72466 Err:     0 (0.00%) Active: 100 Started: 101 Finished: 1
+2026-06-28 19:10:00,002 INFO o.a.j.r.Summariser: summary +  18015 in 00:00:30 =  601.2/s Avg:   166 Min:    89 Max:   919 Err:     0 (0.00%) Active: 100 Started: 101 Finished: 1
+2026-06-28 19:10:00,002 INFO o.a.j.r.Summariser: summary =  20790 in 00:01:48 =  192.1/s Avg:   487 Min:    89 Max: 72466 Err:     0 (0.00%)
+2026-06-28 19:10:11,791 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-32
+2026-06-28 19:10:11,791 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-32
+2026-06-28 19:10:11,793 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-12
+2026-06-28 19:10:11,793 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-12
+2026-06-28 19:10:11,795 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-39
+2026-06-28 19:10:11,795 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-39
+2026-06-28 19:10:11,798 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-18
+2026-06-28 19:10:11,798 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-18
+2026-06-28 19:10:11,802 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-5
+2026-06-28 19:10:11,802 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-5
+2026-06-28 19:10:11,804 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-28
+2026-06-28 19:10:11,804 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-28
+2026-06-28 19:10:11,804 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-29
+2026-06-28 19:10:11,805 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-29
+2026-06-28 19:10:11,805 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-17
+2026-06-28 19:10:11,805 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-17
+2026-06-28 19:10:11,807 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-13
+2026-06-28 19:10:11,807 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-26
+2026-06-28 19:10:11,807 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-13
+2026-06-28 19:10:11,807 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-26
+2026-06-28 19:10:11,813 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-3
+2026-06-28 19:10:11,813 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-3
+2026-06-28 19:10:11,823 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-41
+2026-06-28 19:10:11,823 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-40
+2026-06-28 19:10:11,823 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-40
+2026-06-28 19:10:11,823 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-41
+2026-06-28 19:10:11,847 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-46
+2026-06-28 19:10:11,847 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-21
+2026-06-28 19:10:11,847 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-43
+2026-06-28 19:10:11,848 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-46
+2026-06-28 19:10:11,848 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-21
+2026-06-28 19:10:11,848 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-43
+2026-06-28 19:10:11,849 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-6
+2026-06-28 19:10:11,849 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-24
+2026-06-28 19:10:11,849 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-6
+2026-06-28 19:10:11,849 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-38
+2026-06-28 19:10:11,849 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-9
+2026-06-28 19:10:11,849 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-38
+2026-06-28 19:10:11,849 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-24
+2026-06-28 19:10:11,849 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-9
+2026-06-28 19:10:11,863 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-48
+2026-06-28 19:10:11,863 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-37
+2026-06-28 19:10:11,864 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-48
+2026-06-28 19:10:11,864 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-37
+2026-06-28 19:10:11,865 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-36
+2026-06-28 19:10:11,865 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-42
+2026-06-28 19:10:11,865 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-36
+2026-06-28 19:10:11,865 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-42
+2026-06-28 19:10:11,870 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-7
+2026-06-28 19:10:11,870 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-7
+2026-06-28 19:10:11,870 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-20
+2026-06-28 19:10:11,870 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-11
+2026-06-28 19:10:11,871 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-20
+2026-06-28 19:10:11,871 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-11
+2026-06-28 19:10:11,871 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-25
+2026-06-28 19:10:11,871 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-25
+2026-06-28 19:10:11,879 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-47
+2026-06-28 19:10:11,879 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-47
+2026-06-28 19:10:11,887 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-45
+2026-06-28 19:10:11,887 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-45
+2026-06-28 19:10:11,891 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-50
+2026-06-28 19:10:11,891 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-50
+2026-06-28 19:10:11,893 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-31
+2026-06-28 19:10:11,893 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-31
+2026-06-28 19:10:11,902 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-23
+2026-06-28 19:10:11,902 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-22
+2026-06-28 19:10:11,902 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-22
+2026-06-28 19:10:11,902 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-23
+2026-06-28 19:10:11,905 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-8
+2026-06-28 19:10:11,905 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-8
+2026-06-28 19:10:11,906 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-14
+2026-06-28 19:10:11,907 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-14
+2026-06-28 19:10:11,907 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-10
+2026-06-28 19:10:11,907 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-10
+2026-06-28 19:10:11,913 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-27
+2026-06-28 19:10:11,913 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-27
+2026-06-28 19:10:11,930 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-4
+2026-06-28 19:10:11,930 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-4
+2026-06-28 19:10:11,930 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-34
+2026-06-28 19:10:11,931 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-34
+2026-06-28 19:10:11,934 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-33
+2026-06-28 19:10:11,934 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-33
+2026-06-28 19:10:11,943 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-16
+2026-06-28 19:10:11,944 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-19
+2026-06-28 19:10:11,945 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-16
+2026-06-28 19:10:11,945 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-19
+2026-06-28 19:10:11,951 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-2
+2026-06-28 19:10:11,951 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-49
+2026-06-28 19:10:11,951 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-15
+2026-06-28 19:10:11,951 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-35
+2026-06-28 19:10:11,951 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-15
+2026-06-28 19:10:11,951 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-49
+2026-06-28 19:10:11,951 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-2
+2026-06-28 19:10:11,951 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-35
+2026-06-28 19:10:11,978 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-30
+2026-06-28 19:10:11,978 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-1
+2026-06-28 19:10:11,978 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-30
+2026-06-28 19:10:11,978 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-1
+2026-06-28 19:10:11,984 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 02 - INSERT Benchmark (50 threads x 120s) 2-44
+2026-06-28 19:10:11,984 INFO o.a.j.t.JMeterThread: Thread finished: 02 - INSERT Benchmark (50 threads x 120s) 2-44
+2026-06-28 19:10:16,801 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-36
+2026-06-28 19:10:16,802 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-36
+2026-06-28 19:10:16,803 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-25
+2026-06-28 19:10:16,803 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-41
+2026-06-28 19:10:16,803 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-25
+2026-06-28 19:10:16,803 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-41
+2026-06-28 19:10:16,807 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-44
+2026-06-28 19:10:16,807 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-44
+2026-06-28 19:10:16,810 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-31
+2026-06-28 19:10:16,810 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-31
+2026-06-28 19:10:16,815 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-28
+2026-06-28 19:10:16,815 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-45
+2026-06-28 19:10:16,816 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-28
+2026-06-28 19:10:16,816 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-45
+2026-06-28 19:10:16,820 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-4
+2026-06-28 19:10:16,820 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-3
+2026-06-28 19:10:16,820 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-8
+2026-06-28 19:10:16,820 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-4
+2026-06-28 19:10:16,820 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-8
+2026-06-28 19:10:16,820 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-3
+2026-06-28 19:10:16,821 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-5
+2026-06-28 19:10:16,821 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-5
+2026-06-28 19:10:16,831 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-15
+2026-06-28 19:10:16,832 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-15
+2026-06-28 19:10:16,832 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-34
+2026-06-28 19:10:16,832 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-12
+2026-06-28 19:10:16,832 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-34
+2026-06-28 19:10:16,832 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-12
+2026-06-28 19:10:16,834 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-24
+2026-06-28 19:10:16,834 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-26
+2026-06-28 19:10:16,834 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-26
+2026-06-28 19:10:16,834 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-24
+2026-06-28 19:10:16,837 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-37
+2026-06-28 19:10:16,837 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-37
+2026-06-28 19:10:16,838 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-48
+2026-06-28 19:10:16,838 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-48
+2026-06-28 19:10:16,843 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-32
+2026-06-28 19:10:16,844 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-32
+2026-06-28 19:10:16,847 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-17
+2026-06-28 19:10:16,847 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-23
+2026-06-28 19:10:16,847 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-27
+2026-06-28 19:10:16,847 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-16
+2026-06-28 19:10:16,847 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-47
+2026-06-28 19:10:16,847 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-16
+2026-06-28 19:10:16,847 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-27
+2026-06-28 19:10:16,847 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-17
+2026-06-28 19:10:16,847 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-13
+2026-06-28 19:10:16,847 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-39
+2026-06-28 19:10:16,847 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-23
+2026-06-28 19:10:16,847 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-47
+2026-06-28 19:10:16,847 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-39
+2026-06-28 19:10:16,847 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-13
+2026-06-28 19:10:16,853 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-46
+2026-06-28 19:10:16,853 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-38
+2026-06-28 19:10:16,853 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-38
+2026-06-28 19:10:16,853 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-46
+2026-06-28 19:10:16,854 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-20
+2026-06-28 19:10:16,854 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-20
+2026-06-28 19:10:16,860 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-9
+2026-06-28 19:10:16,860 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-30
+2026-06-28 19:10:16,860 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-9
+2026-06-28 19:10:16,860 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-7
+2026-06-28 19:10:16,861 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-7
+2026-06-28 19:10:16,860 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-6
+2026-06-28 19:10:16,861 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-6
+2026-06-28 19:10:16,860 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-21
+2026-06-28 19:10:16,861 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-21
+2026-06-28 19:10:16,860 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-30
+2026-06-28 19:10:16,863 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-10
+2026-06-28 19:10:16,863 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-33
+2026-06-28 19:10:16,863 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-19
+2026-06-28 19:10:16,863 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-10
+2026-06-28 19:10:16,863 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-19
+2026-06-28 19:10:16,863 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-33
+2026-06-28 19:10:16,864 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-22
+2026-06-28 19:10:16,864 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-22
+2026-06-28 19:10:16,870 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-43
+2026-06-28 19:10:16,870 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-29
+2026-06-28 19:10:16,870 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-50
+2026-06-28 19:10:16,870 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-43
+2026-06-28 19:10:16,870 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-40
+2026-06-28 19:10:16,870 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-29
+2026-06-28 19:10:16,870 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-50
+2026-06-28 19:10:16,870 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-40
+2026-06-28 19:10:16,880 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-18
+2026-06-28 19:10:16,880 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-1
+2026-06-28 19:10:16,880 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-49
+2026-06-28 19:10:16,881 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-18
+2026-06-28 19:10:16,881 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-49
+2026-06-28 19:10:16,881 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-1
+2026-06-28 19:10:16,881 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-35
+2026-06-28 19:10:16,881 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-35
+2026-06-28 19:10:16,886 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-11
+2026-06-28 19:10:16,886 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-42
+2026-06-28 19:10:16,886 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-2
+2026-06-28 19:10:16,886 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-42
+2026-06-28 19:10:16,886 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-11
+2026-06-28 19:10:16,886 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-2
+2026-06-28 19:10:16,887 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: 03 - UPDATE Benchmark (50 threads x 120s) 3-14
+2026-06-28 19:10:16,887 INFO o.a.j.t.JMeterThread: Thread finished: 03 - UPDATE Benchmark (50 threads x 120s) 3-14
+2026-06-28 19:10:16,887 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2026-06-28 19:10:16,909 INFO o.a.j.r.Summariser: summary +   9791 in 00:00:17 =  579.1/s Avg:   147 Min:    89 Max:   749 Err:     0 (0.00%) Active: 0 Started: 101 Finished: 101
+2026-06-28 19:10:16,909 INFO o.a.j.r.Summariser: summary =  30581 in 00:02:05 =  244.4/s Avg:   378 Min:    89 Max: 72466 Err:     0 (0.00%)

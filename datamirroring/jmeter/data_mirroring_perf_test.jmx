@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Data Mirroring Performance Test - Insert and Update Benchmark
+     Target: rkdb_mirror database on rkdbmirrortest Snowflake Postgres instance
+     Host and password already populated. Run headless with jmeter -n -t this_file.jmx
+-->
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan"
+              testname="Data Mirroring Perf Test - Insert and Update" enabled="true">
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments"
+                   guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="MAX_CLIENTID" elementType="Argument">
+            <stringProp name="Argument.name">MAX_CLIENTID</stringProp>
+            <stringProp name="Argument.value">10000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="MAX_MEMBERID" elementType="Argument">
+            <stringProp name="Argument.name">MAX_MEMBERID</stringProp>
+            <stringProp name="Argument.value">500000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="MAX_SIGNIFYID" elementType="Argument">
+            <stringProp name="Argument.name">MAX_SIGNIFYID</stringProp>
+            <stringProp name="Argument.value">100</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.comments">Data Mirroring perf test. UPDATE nznzambvcndfdaolsx6w5t3cpe.sfsenorthamerica-rkhandhadia-aws1.us-east-1.aws.postgres.snowflake.app and qVZIIXlYjsKDuTFCtHyAy53aoAMYnB9oTtQcFaBq6Z9rMDcUQwIwXwolE75Fc5AL before running.</stringProp>
+    </TestPlan>
+    <hashTree>
+
+      <!-- ================================================================
+           JDBC Connection Pool
+           ================================================================ -->
+      <JDBCDataSource guiclass="TestBeanGUI" testclass="JDBCDataSource"
+                      testname="PostgreSQL JDBC Pool" enabled="true">
+        <boolProp name="autocommit">true</boolProp>
+        <stringProp name="checkQuery">SELECT 1</stringProp>
+        <stringProp name="connectionAge">-1</stringProp>
+        <stringProp name="connectionProperties"></stringProp>
+        <stringProp name="dataSource">pg_pool</stringProp>
+        <stringProp name="dbUrl">jdbc:postgresql://YOUR_SPG_HOST.snowflake.app:5432/rkdb_mirror?sslmode=require</stringProp>
+        <stringProp name="driver">org.postgresql.Driver</stringProp>
+        <stringProp name="initQuery"></stringProp>
+        <boolProp name="keepAlive">true</boolProp>
+        <stringProp name="password">REPLACE_WITH_SPG_PASSWORD</stringProp>
+        <stringProp name="poolMax">60</stringProp>
+        <boolProp name="preinit">false</boolProp>
+        <stringProp name="timeout">120000</stringProp>
+        <stringProp name="transactionIsolation">DEFAULT</stringProp>
+        <stringProp name="trimInterval">60000</stringProp>
+        <stringProp name="username">snowflake_admin</stringProp>
+      </JDBCDataSource>
+      <hashTree/>
+
+      <!-- ================================================================
+           Phase 01: Warm-Up  (1 thread x 10 loops)
+           ================================================================ -->
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup"
+                   testname="01 - Warm-Up" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController"
+                     guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">10</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">0</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler"
+                     testname="Warm-Up: SELECT 1" enabled="true">
+          <stringProp name="dataSource">pg_pool</stringProp>
+          <stringProp name="query">SELECT 1 AS warm</stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="queryTimeout">10</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+      </hashTree>
+
+      <!-- ================================================================
+           Phase 02: INSERT Benchmark  (50 threads x 120s)
+           Inserts new rows into labresult_neil_oltp
+           ================================================================ -->
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup"
+                   testname="02 - INSERT Benchmark (50 threads x 120s)" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController"
+                     guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">50</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">10</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">120</stringProp>
+        <stringProp name="ThreadGroup.delay">0</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig"
+                              testname="Random CLIENT" enabled="true">
+          <stringProp name="maximumValue">${MAX_CLIENTID}</stringProp>
+          <stringProp name="minimumValue">1</stringProp>
+          <stringProp name="outputFormat">00000</stringProp>
+          <boolProp name="perThread">true</boolProp>
+          <stringProp name="variableName">CLIENTID</stringProp>
+        </RandomVariableConfig>
+        <hashTree/>
+        <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig"
+                              testname="Random MEMBERID" enabled="true">
+          <stringProp name="maximumValue">${MAX_MEMBERID}</stringProp>
+          <stringProp name="minimumValue">1</stringProp>
+          <stringProp name="outputFormat">0000000</stringProp>
+          <boolProp name="perThread">true</boolProp>
+          <stringProp name="variableName">MEMBERID_NUM</stringProp>
+        </RandomVariableConfig>
+        <hashTree/>
+        <!-- INSERT into labresult_neil_oltp using ON CONFLICT DO NOTHING to avoid PK errors -->
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler"
+                     testname="INSERT: labresult_neil_oltp" enabled="true">
+          <stringProp name="dataSource">pg_pool</stringProp>
+          <stringProp name="queryType">Prepared Update Statement</stringProp>
+          <stringProp name="query">
+INSERT INTO labresult_neil_oltp
+  (client_id, file_import_id, member_id, loinc, lab_result_value, lab_name, ordered_date, result_report_date)
+VALUES
+  (?, gen_random_uuid()::text, ?, '2951-2', ROUND(RANDOM()::numeric * 500, 2)::text,
+   'LabMirrorTest', CURRENT_DATE - (RANDOM()*365)::int, CURRENT_DATE)
+ON CONFLICT DO NOTHING
+          </stringProp>
+          <stringProp name="queryArguments">CLIENT${CLIENTID},MBR${MEMBERID_NUM}</stringProp>
+          <stringProp name="queryArgumentsTypes">VARCHAR,VARCHAR</stringProp>
+          <stringProp name="queryTimeout">30</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="variableNames"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <!-- INSERT into memberdiagnosis -->
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler"
+                     testname="INSERT: memberdiagnosis" enabled="true">
+          <stringProp name="dataSource">pg_pool</stringProp>
+          <stringProp name="queryType">Prepared Update Statement</stringProp>
+          <stringProp name="query">
+INSERT INTO memberdiagnosis
+  (clientid, signifyid, dimdiagnosishashkey, diagnosisversiondescription,
+   diagnosiscode, lastoccurrence, description, diagnosissummarygroupname, dimmemberhashkey)
+VALUES
+  (?, LPAD(?, 10, '0'), gen_random_uuid()::text, 'ICD-10',
+   'E11.9', NOW() - (RANDOM()*365)::int * INTERVAL '1 day',
+   'Type 2 Diabetes', 'Chronic', gen_random_uuid()::text)
+ON CONFLICT DO NOTHING
+          </stringProp>
+          <stringProp name="queryArguments">${CLIENTID},${CLIENTID}</stringProp>
+          <stringProp name="queryArgumentsTypes">INTEGER,VARCHAR</stringProp>
+          <stringProp name="queryTimeout">30</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector"
+                         testname="Insert Phase Summary" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time><latency>true</latency><timestamp>true</timestamp>
+              <success>true</success><label>true</label><code>true</code>
+              <message>true</message><threadName>true</threadName>
+              <fieldNames>true</fieldNames><bytes>true</bytes>
+              <threadCounts>true</threadCounts><idleTime>true</idleTime>
+            </value>
+          </objProp>
+          <stringProp name="filename">/Users/rkhandhadia/Documents/RKDBmirrongtest/results/jmeter_insert_phase.csv</stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+
+      <!-- ================================================================
+           Phase 03: UPDATE Benchmark  (50 threads x 120s)
+           Updates existing rows in labresult_neil_oltp by PK
+           ================================================================ -->
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup"
+                   testname="03 - UPDATE Benchmark (50 threads x 120s)" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController"
+                     guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">50</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">10</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">120</stringProp>
+        <stringProp name="ThreadGroup.delay">5</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig"
+                              testname="Random CLIENT for UPDATE" enabled="true">
+          <stringProp name="maximumValue">${MAX_CLIENTID}</stringProp>
+          <stringProp name="minimumValue">1</stringProp>
+          <stringProp name="outputFormat">00000</stringProp>
+          <boolProp name="perThread">true</boolProp>
+          <stringProp name="variableName">UPD_CLIENTID</stringProp>
+        </RandomVariableConfig>
+        <hashTree/>
+        <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig"
+                              testname="Random MEMBERID for UPDATE" enabled="true">
+          <stringProp name="maximumValue">${MAX_MEMBERID}</stringProp>
+          <stringProp name="minimumValue">1</stringProp>
+          <stringProp name="outputFormat">0000000</stringProp>
+          <boolProp name="perThread">true</boolProp>
+          <stringProp name="variableName">UPD_MEMBERID_NUM</stringProp>
+        </RandomVariableConfig>
+        <hashTree/>
+        <!-- UPDATE lab_result_value on a randomly selected row -->
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler"
+                     testname="UPDATE: labresult_neil_oltp lab_result_value" enabled="true">
+          <stringProp name="dataSource">pg_pool</stringProp>
+          <stringProp name="queryType">Prepared Update Statement</stringProp>
+          <stringProp name="query">
+UPDATE labresult_neil_oltp
+SET    lab_result_value = ROUND(RANDOM()::numeric * 500, 2)::text,
+       result_report_date = CURRENT_DATE
+WHERE  member_id = ?
+  AND  client_id = ?
+  AND  ordered_date = (
+         SELECT MIN(ordered_date) FROM labresult_neil_oltp
+         WHERE  member_id = ?  AND  client_id = ?
+         LIMIT 1
+       )
+          </stringProp>
+          <stringProp name="queryArguments">MBR${UPD_MEMBERID_NUM},CLIENT${UPD_CLIENTID},MBR${UPD_MEMBERID_NUM},CLIENT${UPD_CLIENTID}</stringProp>
+          <stringProp name="queryArgumentsTypes">VARCHAR,VARCHAR,VARCHAR,VARCHAR</stringProp>
+          <stringProp name="queryTimeout">30</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <!-- UPDATE lastoccurrence in memberdiagnosis -->
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler"
+                     testname="UPDATE: memberdiagnosis lastoccurrence" enabled="true">
+          <stringProp name="dataSource">pg_pool</stringProp>
+          <stringProp name="queryType">Prepared Update Statement</stringProp>
+          <stringProp name="query">
+UPDATE memberdiagnosis
+SET    lastoccurrence = NOW(),
+       description = 'Updated by mirror test ' || NOW()::text
+WHERE  clientid = ?
+  AND  signifyid = (
+         SELECT signifyid FROM memberdiagnosis
+         WHERE  clientid = ?
+         LIMIT 1
+       )
+          </stringProp>
+          <stringProp name="queryArguments">${UPD_CLIENTID},${UPD_CLIENTID}</stringProp>
+          <stringProp name="queryArgumentsTypes">INTEGER,INTEGER</stringProp>
+          <stringProp name="queryTimeout">30</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector"
+                         testname="Update Phase Summary" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time><latency>true</latency><timestamp>true</timestamp>
+              <success>true</success><label>true</label><code>true</code>
+              <message>true</message><threadName>true</threadName>
+              <fieldNames>true</fieldNames><bytes>true</bytes>
+              <threadCounts>true</threadCounts><idleTime>true</idleTime>
+            </value>
+          </objProp>
+          <stringProp name="filename">/Users/rkhandhadia/Documents/RKDBmirrongtest/results/jmeter_update_phase.csv</stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+
+      <!-- ================================================================
+           Global Summary Report
+           ================================================================ -->
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector"
+                       testname="Overall Summary Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time><latency>true</latency><timestamp>true</timestamp>
+            <success>true</success><label>true</label><code>true</code>
+            <message>true</message><threadName>true</threadName>
+            <fieldNames>true</fieldNames><bytes>true</bytes>
+            <threadCounts>true</threadCounts><idleTime>true</idleTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">/Users/rkhandhadia/Documents/RKDBmirrongtest/results/jmeter_all_phases.csv</stringProp>
+      </ResultCollector>
+      <hashTree/>
+
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

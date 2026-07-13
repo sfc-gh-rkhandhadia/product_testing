@@ -1,0 +1,5 @@
+table,rows,duration_secs,rows_per_sec
+labresult_neil_oltp,15000000,863.3,17375.0
+memberdiagnosis,3000000,202.3,14831.0
+membermedications,2000000,192.9,10370.0
+TOTAL,20000000,1258.5,15892.0
